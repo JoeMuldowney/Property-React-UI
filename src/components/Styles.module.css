@@ -1,0 +1,13 @@
+.buttonContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 0;
+}
+
+.buttonContainer.button {         
+    cursor: pointer; /* Change cursor on hover */
+}
+  
+.spacing{
+  margin: 5px 0;
+}
