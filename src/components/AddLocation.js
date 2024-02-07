@@ -58,7 +58,7 @@ export default function AddLocations() {
     >
         <Paper elevation={3} style={paperStyle}>
             <h1 style={{color:"blue"}}><b>Enter Client ID And New Location Info</b></h1>
-            <div class={Styles.spacing}>
+            <div className={Styles.spacing}>
       <TextField  label="client id " variant="outlined" fullWidth
       value={id}
       onChange={(e)=>setId(e.target.value)} /></div>
@@ -67,7 +67,7 @@ export default function AddLocations() {
       <TextField  label="street" variant="outlined" fullWidth
       value={street}
       onChange={(e)=>setStreet(e.target.value)} /></div>
-      <div class={Styles.spacing}>
+      <div className={Styles.spacing}>
       <TextField  label="city" variant="outlined" fullWidth
       value={city}
       onChange={(e)=>setCity(e.target.value)}/></div>
@@ -75,11 +75,11 @@ export default function AddLocations() {
       <TextField  label="zipcode" variant="outlined" fullWidth
       value={zipCode}
       onChange={(e)=>setZipCode(e.target.value)} /></div>
-      <div class={Styles.spacing}>
+      <div className={Styles.spacing}>
       <TextField  label="state" variant="outlined" fullWidth
       value={state}
       onChange={(e)=>setState(e.target.value)}/></div>
-      <div class={Styles.spacing}>
+      <div className={Styles.spacing}>
       <TextField  label="price" variant="outlined" fullWidth
       value={price}
       onChange={(e)=>setPrice(e.target.value)}/></div>        

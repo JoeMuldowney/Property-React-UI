@@ -67,18 +67,18 @@ export default function Person() {
     >
         <Paper elevation={3} style={paperStyle}>
             <h1 style={{color:"blue"}}><b>Add Client</b></h1>
-            <div class={Styles.spacing}>
+            <div className={Styles.spacing}>
       <TextField  label="First Name" variant="outlined" fullWidth
       value={firstName}
       onChange={(e)=>setFirstName(e.target.value)} /></div>
-      <div class={Styles.spacing}>
+      <div className={Styles.spacing}>
       <TextField  label="Last Name" variant="outlined" fullWidth
       value={lastName}
       onChange={(e)=>setLasttName(e.target.value)}/></div>
 
       {locations.map((location, index) => (
           <div key={index}>
-            <div class={Styles.spacing}>
+            <div className={Styles.spacing}>
             <TextField
               label={`Street ${index + 1}`}              
               fullWidth
@@ -89,7 +89,7 @@ export default function Person() {
               
             />
             </div>
-            <div class={Styles.spacing}>
+            <div className={Styles.spacing}>
             <TextField
               label={`City ${index + 1}`}              
               fullWidth
@@ -99,7 +99,7 @@ export default function Person() {
               }
             />
             </div>
-            <div class={Styles.spacing}>
+            <div className={Styles.spacing}>
             <TextField
               label={`Zipcode ${index + 1}`}              
               fullWidth
@@ -108,7 +108,7 @@ export default function Person() {
                 handleLocationChange(index, 'zipCode', e.target.value)
               }
             />
-            <div class={Styles.spacing}>
+            <div className={Styles.spacing}>
             <TextField
               label={`State ${index + 1}`}              
               fullWidth
@@ -118,7 +118,7 @@ export default function Person() {
               }
             />
             </div>
-            <div class={Styles.spacing}></div>
+            <div className={Styles.spacing}></div>
             <TextField
               label={`Price ${index + 1}`}              
               fullWidth
