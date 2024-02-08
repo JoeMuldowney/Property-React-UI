@@ -18,7 +18,7 @@ export default function PersonSearch() {
         const idValue = id;     
        
         
-       fetch("http://localhost:8080/person/"  + idValue,{
+       fetch("http://18.116.200.65:8080/person/"  + idValue,{
          method: "GET", 
          headers:{"Content-Type":"application/json"}, 
         

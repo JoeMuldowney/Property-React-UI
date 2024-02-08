@@ -18,7 +18,7 @@ export default function PersonSearch() {
           
      
       
-     fetch("http://localhost:8080/person",{
+     fetch("http://18.116.200.65:8080/person",{
        method: "GET", 
        headers:{"Content-Type":"application/json"}, 
       
