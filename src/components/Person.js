@@ -18,7 +18,7 @@ export default function Person() {
         e.stopPropagation();   
     const person = { firstName, lastName, locations }; 
     console.log(person)
-    fetch("http://52.14.246.147/person",{
+    fetch("https://www.csportfoliojm.com/backend/person",{
          method: "POST", 
          headers:{"Content-Type":"application/json"}, 
          body:JSON.stringify(person)

@@ -18,7 +18,7 @@ export default function PersonSearch() {
           
      
       
-     fetch("http://52.14.246.147/person",{
+     fetch("https://www.csportfoliojm.com/backend/person",{
        method: "GET", 
        headers:{"Content-Type":"application/json"}, 
       
