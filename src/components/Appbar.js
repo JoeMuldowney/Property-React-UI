@@ -6,7 +6,6 @@ import SearchAllPersons from './SearchAllPersons'
 import AddLocations from './AddLocation'
 import DeleteLocation from './DeleteLocation'
 import DeletePerson from './DeletePerson';
-
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
