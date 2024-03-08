@@ -80,7 +80,7 @@ return(
                   <p>Id: {location.id}</p>
                   <p>Street: {location.street || 'N/A'}</p>
                   <p>City: {location.city || 'N/A'}</p>
-                  <p>Zipcode: {location.zipcode || 'N/A'}</p>
+                  <p>Zipcode: {location.zipCode || 'N/A'}</p>
                   <p>State: {location.state || 'N/A'}</p>
                   <p>Price: {location.price || 'N/A'}</p>
                 </li>
