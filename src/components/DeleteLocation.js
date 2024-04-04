@@ -15,7 +15,7 @@ export default function DeleteLocation(){
         const idValue = id;  
 
 
-    fetch("http://18.116.200.65:8080/location/" + idValue,{
+    fetch("https://csportfoliojm.com/backend/location/" + idValue,{
          method: "DELETE", 
          
         })       
