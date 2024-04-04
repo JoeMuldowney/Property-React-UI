@@ -20,7 +20,7 @@ export default function AddLocations() {
         const idValue = id; 
     const location = {street, city, zipCode, state, price}
     console.log(location)
-    fetch("https://csportfoliojm.com/backend/location/"+ idValue,{
+    fetch("http://18.116.200.65:8080/location/"+ idValue,{
          method: "POST", 
          headers:{"Content-Type":"application/json"}, 
          body:JSON.stringify(location)
