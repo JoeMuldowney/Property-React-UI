@@ -16,7 +16,7 @@ export default function DeletePerson(){
         const idValue = id;  
 
 
-    fetch("http://localhost:8080/person/" + idValue,{
+    fetch("https://csportfoliojm.com/backend/person/" + idValue,{
          method: "DELETE", 
          
         })
