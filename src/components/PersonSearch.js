@@ -18,7 +18,7 @@ export default function PersonSearch() {
         const idValue = id;     
        
         
-       fetch("https://csportfoliojm.com/backend/person/"  + idValue,{
+       fetch("http://localhost:8080/person/"  + idValue,{
          method: "GET", 
          headers:{"Content-Type":"application/json"}, 
         
@@ -62,14 +62,14 @@ return(
     autoComplete="off"
   >
      <Paper elevation={3} style={paperStyle}>
-          <h1 style={{color:"blue"}}><b>Lookup Client</b></h1>
+          <h1 style={{color:"black"}}><b>Search by client id</b></h1>
           <TextField  label="Person id " variant="outlined" fullWidth
     value={id}
     onChange={(e)=>setId(e.target.value)} />
  {/* Display the personData */}
  {personData && (
         <div>
-          <h2>Person Information:</h2>
+          <h2>Owner Information:</h2>
           <p>First Name: {personData.firstName}</p>
           <p>Last Name: {personData.lastName}</p>
 
@@ -82,7 +82,7 @@ return(
                   <li key={index}>
                     <p>Street: {location.street}</p>
                     <p>City: {location.city}</p>
-                    <p>Zipcode: {location.zipcode}</p>
+                    <p>ZIP Code: {location.zipCode}</p>
                     <p>State: {location.state}</p>
                     <p>Price: {location.price}</p>
                   </li>
@@ -95,7 +95,7 @@ return(
     
   
     
-    <div className={Styles.buttonContainer}><Button variant="contained" onClick={lookupClick}>Search One</Button></div>
+    <div className={Styles.buttonContainer}><Button variant="contained" onClick={lookupClick}>Search</Button></div>
     
 
     

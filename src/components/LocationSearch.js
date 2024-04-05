@@ -16,7 +16,7 @@ export default function LocationSearch(){
         const idValue = id;  
 
 
-    fetch("https://csportfoliojm.com/backend/location/" + idValue,{
+    fetch("http://localhost:8080/location/" + idValue,{
          method: "GET", 
          headers:{"Content-Type":"application/json"}, 
         })
@@ -62,7 +62,7 @@ export default function LocationSearch(){
     autoComplete="off"
     >
         <Paper elevation={3} style={paperStyle}>
-            <h1 style={{color:"blue"}}><b>Lookup a Location</b></h1>
+            <h1 style={{color:"black"}}><b>Search by location id</b></h1>
             <TextField  label="Location id " variant="outlined" fullWidth
     value={id}
     onChange={(e)=>setId(e.target.value)} />
@@ -73,7 +73,7 @@ export default function LocationSearch(){
           <p>Street: {locationData.street}</p>
           <p>City: {locationData.city}</p>
           <p>State: {locationData.state}</p>
-          <p>ZipCode: {locationData.zipCode}</p>
+          <p>ZIP Code: {locationData.zipCode}</p>
           <p>Price: {locationData.price}</p>
         </div>
       )}

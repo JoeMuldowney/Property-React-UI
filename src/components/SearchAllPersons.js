@@ -18,7 +18,7 @@ export default function PersonSearch() {
           
      
       
-     fetch("https://csportfoliojm.com/backend/person",{
+     fetch("http://localhost:8080/person",{
        method: "GET", 
        headers:{"Content-Type":"application/json"}, 
       
@@ -60,13 +60,13 @@ return(
     autoComplete="off"
   >
      <Paper elevation={3} style={paperStyle}>
-          <h1 style={{color:"blue"}}><b>Lookup All Clients</b></h1>
+          <h1 style={{color:"black"}}><b>Lookup All Clients</b></h1>
           
     {Array.isArray(personData) && personData.length > 0 && (
   <div>
     {personData.map((person, index) => (
       <div key={index}>
-            <h2>Client Information:</h2>
+            <h2>Owner Information:</h2>
         <p>First Name: {person.firstName || 'N/A'}</p>
         <p>Last Name: {person.lastName || 'N/A'}</p>
         
@@ -80,7 +80,7 @@ return(
                   <p>Id: {location.id}</p>
                   <p>Street: {location.street || 'N/A'}</p>
                   <p>City: {location.city || 'N/A'}</p>
-                  <p>Zipcode: {location.zipCode || 'N/A'}</p>
+                  <p>ZIP Code: {location.zipCode || 'N/A'}</p>
                   <p>State: {location.state || 'N/A'}</p>
                   <p>Price: {location.price || 'N/A'}</p>
                 </li>

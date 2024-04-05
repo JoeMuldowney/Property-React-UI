@@ -2,7 +2,7 @@ import * as React from 'react';
 import Styles from './Styles.module.css';
 import Container from '@mui/material/Container';
 import TextField from '@mui/material/TextField';
-import { Paper, Button } from '@mui/material';
+import { Paper, Button, Snackbar } from '@mui/material';
 
 export default function Person() {
     const paperStyle={padding:'50px 20px', width:600,margin:"20px auto"}
@@ -11,6 +11,7 @@ export default function Person() {
     const [locations, setLocations] = React.useState([
       { street: '', city: '', zipCode: '', state: '', price: '' },
     ]);
+    const[snackbarOpen, setSnackbarOpen] = React.useState(false);
 
     
     const handleClick=(e)=>{
@@ -18,12 +19,22 @@ export default function Person() {
         e.stopPropagation();   
     const person = { firstName, lastName, locations }; 
     console.log(person)
-    fetch("https://csportfoliojm.com/backend/person",{
+    fetch("http://localhost:8080/person",{
          method: "POST", 
          headers:{"Content-Type":"application/json"}, 
          body:JSON.stringify(person)
         })
-        .then(()=>console.log("New person added"))
+        .then(() => {
+          console.log("New location added");
+          setSnackbarOpen(true); // Open Snackbar on successful insertion
+          // Clear input fields after successful insertion
+          setFirstName('');
+          setLasttName('');
+          setLocations([
+            { street: '', city: '', zipCode: '', state: '', price: '' },
+          ]);
+          
+      })
         .catch(error => {
           console.error("Error looking up person:", error);
           if (error.response) {
@@ -37,6 +48,10 @@ export default function Person() {
             console.error("Error setting up request:", error.message);
           }
     });
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbarOpen(false); // Close Snackbar
   };
  const handleAddLocation = () => {
   setLocations((prevLocations) => [
@@ -66,7 +81,7 @@ export default function Person() {
       autoComplete="off"
     >
         <Paper elevation={3} style={paperStyle}>
-            <h1 style={{color:"blue"}}><b>Add Client</b></h1>
+            <h1 style={{color:"black"}}><b>Add Client</b></h1>
             <div className={Styles.spacing}>
       <TextField  label="First Name" variant="outlined" fullWidth
       value={firstName}
@@ -101,7 +116,7 @@ export default function Person() {
             </div>
             <div className={Styles.spacing}>
             <TextField
-              label={`Zipcode ${index + 1}`}              
+              label={`ZIP Code ${index + 1}`}              
               fullWidth
               value={location.zipCode}
               onChange={(e) =>
@@ -134,10 +149,20 @@ export default function Person() {
          
        <div className={Styles.buttonContainer}><Button onClick={handleAddLocation}>Add Another Location</Button>
         <Button variant="contained" onClick={handleClick}>Submit</Button></div> 
-      
-
-     
       </Paper>
+
+            {/* Snackbar to display success message */}
+            <Snackbar
+              open={snackbarOpen}
+              autoHideDuration={6000} // Adjust duration as needed
+              onClose={handleCloseSnackbar}
+              message="Successfully inserted"
+              action={
+                <Button color="secondary" size="small" onClick={handleCloseSnackbar}>
+                Close
+                </Button>
+                }
+                />
     </Container>
   );
 };
