@@ -5,9 +5,9 @@ This React application empowers you to manage client information with ease. It p
 ##  Table of Contents
 
 - [Installation](#Installation)
-- [Getting Started] (#Getting Started)
+- [Getting Started](#GettingStarted)
 - [Features](#Features)
-- [Technologies Used](#Technolgies Used)
+- [Technologies Used](#Technolgies)
 
 # Installation
 - git clone https://github.com/JoeMuldowney/FrontPropertyApp.git
@@ -28,7 +28,7 @@ This React application empowers you to manage client information with ease. It p
 4. **Clear Data Display**
     - Fetched data is presented in a clear and organized manner using appropriate Material UI components, making it easy for users to understand and utilize.
 
-# Technologies Used
+# Technologies
 
 1. **React.js**
     - A JavaScript library for building user interfaces.
