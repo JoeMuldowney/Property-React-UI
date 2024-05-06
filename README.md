@@ -5,9 +5,9 @@ This React application empowers you to manage client information with ease. It p
 ##  Table of Contents
 
 - [Installation](#Installation)
-- [Getting Started](#GettingStarted)
+- [GettingStarted](#GettingStarted)
 - [Features](#Features)
-- [Technologies Used](#Technolgies)
+- [TechnologiesUsed](#Technolgies)
 
 # Installation
 - git clone https://github.com/JoeMuldowney/FrontPropertyApp.git
