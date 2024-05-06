@@ -1,70 +1,38 @@
-# Getting Started with Create React App
+#  Property Management App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This React application empowers you to manage client information with ease. It provides a user-friendly interface built with Material Design principles, offering intuitive features for adding, retrieving, updating, and deleting client data. The application leverages the Fetch API to optimize data retrieval from a backend API. This ensures only the necessary information is loaded, keeping the user interface focused and responsive. This targeted approach enhances performance and provides a smooth user experience.
 
-## Available Scripts
+##  Table of Contents
 
-In the project directory, you can run:
+- [Installation](#Installation)
+- [Getting Started] (#Getting Started)
+- [Features](#Features)
+- [Technologies Used](#Technolgies Used)
 
-### `npm start`
+# Installation
+- git clone https://github.com/JoeMuldowney/FrontPropertyApp.git
+- cd FrontPropertyApp
+- npm install
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Getting Started
+- npm start
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Features
 
-### `npm test`
+1. **CRUD Operations**
+    - Manage client data efficiently with features for adding, retrieving, updating, and deleting information.
+2. **Intuitive Interface**
+    - Material UI components provide a consistent and user-friendly design language, minimizing the learning curve for users.
+3. **Efficient Data Fetching**
+    - Only the data required for the specific functionality is retrieved, minimizing unnecessary load times and improving responsiveness.
+4. **Clear Data Display**
+    - Fetched data is presented in a clear and organized manner using appropriate Material UI components, making it easy for users to understand and utilize.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Technologies Used
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. **React.js**
+    - A JavaScript library for building user interfaces.
+2. **Material UI**
+    - A library for building beautiful and responsive user interfaces.         
+3. **Fetch API**
+    - A modern browser API for making asynchronous HTTP requests to servers.
