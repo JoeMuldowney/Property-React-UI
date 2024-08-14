@@ -8,7 +8,7 @@ pipeline {
         stage('Remove old container') {
             steps {
                 script {
-                    // Using "|| true" to prevent pipeline failure if container doesn't exist
+                    // prevent pipeline failure if container doesn't exist
                     sh 'docker stop frontend || true'
                     sh 'docker rm frontend || true'
                     sh 'docker system prune -af'
