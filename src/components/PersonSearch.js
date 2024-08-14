@@ -4,7 +4,6 @@ import Container from '@mui/material/Container';
 import TextField from '@mui/material/TextField';
 import { Paper, Button } from '@mui/material';
 
-
 export default function PersonSearch() {
     
     const paperStyle={padding:'50px 20px', width:600,margin:"20px auto"}
