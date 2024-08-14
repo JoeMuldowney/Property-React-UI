@@ -1,5 +1,5 @@
 pipeline {
-    agent myNode
+    agent mynode
      tools{
         nodejs '20.12.1'
     }
