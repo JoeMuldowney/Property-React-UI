@@ -1,9 +1,7 @@
 pipeline {
     agent any
-     tools{
-        nodejs '20.12.1'
-    }
-        environment {
+
+    environment {
         DOCKERHUB_CREDENTIALS = '9f4187c3-8181-4d40-81d7-513dc9f140ce'
     }
     stages {
