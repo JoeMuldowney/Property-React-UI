@@ -28,7 +28,7 @@ export default function AddLocations() {
         })
         .then(() => {
           console.log("New location added");
-          setSnackbarOpen(true); // Open Snackbar on successful insertion
+          setSnackbarOpen(true); 
           // Clear input fields after successful insertion
           setId('');
           setStreet('');
