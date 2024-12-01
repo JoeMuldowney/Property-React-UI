@@ -2,10 +2,12 @@ import * as React from 'react';
 import Person from './Person'
 import PersonSearch from './PersonSearch'
 import LocationSearch from './LocationSearch'
-import SearchAllPersons from './SearchAllPersons'
+import Report from './Report'
 import AddLocations from './AddLocation'
 import DeleteLocation from './DeleteLocation'
 import DeletePerson from './DeletePerson';
+import UpdateClient from './UpdateClient';
+import UpdateLocation from './UpdateLocation';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -55,11 +57,13 @@ export default function Appbar() {
           >
             <MenuItem onClick={() => { handleClose(); setSelectedOption('Add New Client'); }}>Add New Client</MenuItem>
             <MenuItem onClick={() => { handleClose(); setSelectedOption('Lookup Client'); }}>Lookup Client</MenuItem>
-            <MenuItem onClick={() => { handleClose(); setSelectedOption('Lookup Location'); }}>Lookup Location</MenuItem>
-            <MenuItem onClick={() => { handleClose(); setSelectedOption('Lookup All Clients'); }}>Lookup All Clients</MenuItem>
+            <MenuItem onClick={() => { handleClose(); setSelectedOption('Update Client Info'); }}>Update Client </MenuItem>
+            <MenuItem onClick={() => { handleClose(); setSelectedOption('Lookup Location'); }}>Lookup Location</MenuItem>            
             <MenuItem onClick={() => { handleClose(); setSelectedOption('Add Location'); }}>Add Location</MenuItem>
+            <MenuItem onClick={() => { handleClose(); setSelectedOption('Update Location Info'); }}>Update Location</MenuItem>
             <MenuItem onClick={() => { handleClose(); setSelectedOption('Remove A Location'); }}>Remove Location</MenuItem>
             <MenuItem onClick={() => { handleClose(); setSelectedOption('Remove A Client'); }}>Remove Client</MenuItem>
+            <MenuItem onClick={() => { handleClose(); setSelectedOption('Run Report'); }}>Run Report</MenuItem>
           </Menu>
           <Typography
             variant="h6"
@@ -67,18 +71,28 @@ export default function Appbar() {
             component="div"
             sx={{ flexGrow: 1, display: { xs: 'none', sm: 'block' } }}
           >
-            Property App Full Stack Demo
+            Menu
+          </Typography>
+          <Typography
+            variant="h6"
+            noWrap
+            component="div"
+            sx={{ flexGrow: 1,textAlign: 'right', display: { xs: 'none', sm: 'block' } }}
+          >
+            Client Property System (CPS)
           </Typography>
           
         </Toolbar>
       </AppBar>
       {selectedOption === 'Add New Client' && <Person/>}
       {selectedOption === 'Lookup Client' && <PersonSearch />}
+      {selectedOption === 'Update Client Info' && <UpdateClient />}
       {selectedOption === 'Lookup Location' && <LocationSearch />}
-      {selectedOption === 'Lookup All Clients' && <SearchAllPersons />}
       {selectedOption === 'Add Location' && <AddLocations />}
+      {selectedOption === 'Update Location Info' && <UpdateLocation />}
       {selectedOption === 'Remove A Location' && <DeleteLocation />}
       {selectedOption === 'Remove A Client' && <DeletePerson />}
+      {selectedOption === 'Run Report' && <Report />}
     </Box>
     
   );
