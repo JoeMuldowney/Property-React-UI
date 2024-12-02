@@ -41,8 +41,8 @@ return(
     autoComplete="off"
   >
 <Paper elevation={3} style={paperStyle}>
-            <h1 style={{color:"blue"}}><b>Report Generator</b></h1>
-            <h3 style={{color:"blue"}}><b>Select Parameters</b></h3>
+            <h1 style={{color:"black"}}><b>Report Generator</b></h1>
+            <h3 style={{color:"black"}}><b>Select Parameters</b></h3>
            
          
           <div>

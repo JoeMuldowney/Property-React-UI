@@ -96,7 +96,7 @@ export default function UpdateLocation() {
       autoComplete="off"
     >
         <Paper elevation={3} style={paperStyle}>
-            <h1 style={{color:"blue"}}><b>Update Location</b></h1>
+            <h1 style={{color:"black"}}><b>Update Location</b></h1>
             {!isSearched ? (
           // Search Section
           <div>
