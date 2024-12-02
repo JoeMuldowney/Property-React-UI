@@ -11,7 +11,8 @@ export default function UpdateLocation() {
     const[city,setCity] = React.useState('')
     const[zipCode,setZipCode] = React.useState('')
     const[state,setState] = React.useState('')
-    const[price,setPrice] = React.useState('')
+    const[price,setPrice] = React.useState()
+
     const [locationData, setLocationData] = React.useState(null);
     const [isSearched, setIsSearched] = React.useState(false);
 
@@ -41,6 +42,11 @@ export default function UpdateLocation() {
           
         }
     )
+    setStreet(data.street)
+    setCity(data.city)
+    setZipCode(data.state)
+    setState(data.zipCode)
+    setPrice(data.price)
     setIsSearched(true)})
      .catch(error => {
          console.error("Error looking up person:", error);
@@ -83,6 +89,7 @@ export default function UpdateLocation() {
             
           });
  }
+ 
    
      
   return (

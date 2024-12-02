@@ -69,7 +69,13 @@ export default function UpdateClient() {
             email: data.email
             
       }
+
+
     )
+    setFirstName(data.firstName)
+    setLastName(data.lastName)
+    setPhoneNumber(data.phoneNumber)
+    setEmail(data.email)
     setIsSearched(true)})
       .catch(error => {
           console.error("Error looking up person:", error);
@@ -86,6 +92,7 @@ export default function UpdateClient() {
         });
 
   };    
+
      
   return (
     
