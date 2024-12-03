@@ -21,7 +21,7 @@ export default function AddLocations() {
         const idValue = id; 
     const location = {street, city, zipCode, state, price}
     console.log(location)
-    fetch("https://csportfoliojm.com/backend/location/"+ idValue,{
+    fetch("https://csportfoliojm.com/backend/addlocation/"+ idValue,{
          method: "POST", 
          headers:{"Content-Type":"application/json"}, 
          body:JSON.stringify(location)

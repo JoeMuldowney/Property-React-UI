@@ -16,7 +16,7 @@ export default function LocationSearch(){
         const idValue = id;  
 
 
-    fetch("https://csportfoliojm.com/backend/location/" + idValue,{
+    fetch("https://csportfoliojm.com/backend/findlocation/" + idValue,{
          method: "GET", 
          headers:{"Content-Type":"application/json"}, 
         })

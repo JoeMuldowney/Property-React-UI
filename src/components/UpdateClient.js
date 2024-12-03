@@ -22,7 +22,7 @@ export default function UpdateClient() {
     const person = { firstName, lastName, phoneNumber, email }; 
     console.log(person)
     const idValue = id;  
-    fetch("https://csportfoliojm.com/backend/person/" + idValue,{
+    fetch("https://csportfoliojm.com/backend/updateperson/" + idValue,{
          method: "PATCH", 
          headers:{"Content-Type":"application/json"}, 
          body:JSON.stringify(person)
@@ -49,7 +49,7 @@ export default function UpdateClient() {
       const idValue = id;     
      
       
-     fetch("https://csportfoliojm.com/backend/person/"  + idValue,{
+     fetch("https://csportfoliojm.com/backend/findperson/"  + idValue,{
        method: "GET", 
        headers:{"Content-Type":"application/json"}, 
       

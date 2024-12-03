@@ -21,7 +21,7 @@ export default function UpdateLocation() {
         e.preventDefault();
         e.stopPropagation();   
         const idValue = id; 
-    fetch("https://csportfoliojm.com/backend/location/" + idValue,{
+    fetch("https://csportfoliojm.com/backend/findlocation/" + idValue,{
         method: "GET", 
         headers:{"Content-Type":"application/json"}, 
        })
@@ -68,7 +68,7 @@ export default function UpdateLocation() {
         const idValue = id; 
     const location = {street, city, zipCode, state, price}
     console.log(location)
-    fetch("https://csportfoliojm.com/backend/location/" + idValue,{
+    fetch("https://csportfoliojm.com/backend/updatelocation/" + idValue,{
          method: "PATCH", 
          headers:{"Content-Type":"application/json"}, 
          body:JSON.stringify(location)

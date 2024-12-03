@@ -16,7 +16,7 @@ export default function DeleteLocation(){
         const idValue = id;  
 
 
-    fetch("https://csportfoliojm.com/backend/location/" + idValue,{
+    fetch("https://csportfoliojm.com/backend/deletelocation/" + idValue,{
          method: "DELETE", 
          
         })

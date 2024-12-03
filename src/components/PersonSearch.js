@@ -17,7 +17,7 @@ export default function PersonSearch() {
         const idValue = id;     
        
         
-       fetch("https://csportfoliojm.com/backend/person/"  + idValue,{
+       fetch("https://csportfoliojm.com/backend/findperson/"  + idValue,{
          method: "GET", 
          headers:{"Content-Type":"application/json"}, 
         

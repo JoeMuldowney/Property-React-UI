@@ -7,7 +7,7 @@ import { Paper, Button, Snackbar } from '@mui/material';
 export default function Person() {
     const paperStyle={padding:'50px 20px', width:600,margin:"20px auto"}
     const[firstName,setFirstName] = React.useState('')
-    const[lastName,setLasttName] = React.useState('')
+    const[lastName,setLastName] = React.useState('')
     const [locations, setLocations] = React.useState([
       { street: '', city: '', zipCode: '', state: '', price: '' },
     ]);
@@ -19,7 +19,7 @@ export default function Person() {
         e.stopPropagation();   
     const person = { firstName, lastName, locations }; 
     console.log(person)
-    fetch("http://localhost:/person",{
+    fetch("http://localhost:8060/backend/addperson",{
          method: "POST", 
          headers:{"Content-Type":"application/json"}, 
          body:JSON.stringify(person)
@@ -29,7 +29,7 @@ export default function Person() {
           setSnackbarOpen(true); // Open Snackbar on successful insertion
           // Clear input fields after successful insertion
           setFirstName('');
-          setLasttName('');
+          setLastName('');
           setLocations([
             { street: '', city: '', zipCode: '', state: '', price: '' },
           ]);
@@ -89,7 +89,7 @@ export default function Person() {
       <div className={Styles.spacing}>
       <TextField  label="Last Name" variant="outlined" fullWidth
       value={lastName}
-      onChange={(e)=>setLasttName(e.target.value)}/></div>
+      onChange={(e)=>setLastName(e.target.value)}/></div>
 
       {locations.map((location, index) => (
           <div key={index}>
