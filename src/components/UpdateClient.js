@@ -19,7 +19,12 @@ export default function UpdateClient() {
     const handleClick=(e)=>{
         e.preventDefault();
         e.stopPropagation();   
-    const person = { firstName, lastName, phoneNumber, email }; 
+        const person = {
+          firstName: firstName || personData?.firstName,
+          lastName: lastName || personData?.lastName,
+          phoneNumber: phoneNumber || personData?.phoneNumber,
+          email: email || personData?.email,
+      };
     console.log(person)
     const idValue = id;  
     fetch("https://csportfoliojm.com/backend/updateperson/" + idValue,{

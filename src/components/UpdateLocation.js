@@ -11,7 +11,7 @@ export default function UpdateLocation() {
     const[city,setCity] = React.useState('')
     const[zipCode,setZipCode] = React.useState('')
     const[state,setState] = React.useState('')
-    const[price,setPrice] = React.useState()
+    const[price,setPrice] = React.useState('')
 
     const [locationData, setLocationData] = React.useState(null);
     const [isSearched, setIsSearched] = React.useState(false);
@@ -44,12 +44,12 @@ export default function UpdateLocation() {
     )
     setStreet(data.street)
     setCity(data.city)
-    setZipCode(data.state)
-    setState(data.zipCode)
+    setZipCode(data.zipCode)
+    setState(data.state)
     setPrice(data.price)
     setIsSearched(true)})
      .catch(error => {
-         console.error("Error looking up person:", error);
+         console.error("Error looking location:", error);
          if (error.response) {
            // The request was made and the server responded with a status code
            console.error("Server responded with status:", error.response.status);
@@ -62,11 +62,13 @@ export default function UpdateLocation() {
          }
        });
     }
-    const handleClick=(e)=>{
+
+    
+    const UpdateLocationClick=(e)=>{
         e.preventDefault();
         e.stopPropagation();
         const idValue = id; 
-    const location = {street, city, zipCode, state, price}
+    const location = {street, city, state,zipCode,  price}
     console.log(location)
     fetch("https://csportfoliojm.com/backend/updatelocation/" + idValue,{
          method: "PATCH", 
@@ -75,7 +77,7 @@ export default function UpdateLocation() {
         })
         .then(()=>console.log("location updated"))
         .catch(error => {
-          console.error("Error looking up person:", error);
+          console.error("Error looking up location:", error);
           if (error.response) {
             // The request was made and the server responded with a status code
             console.error("Server responded with status:", error.response.status);
@@ -176,7 +178,7 @@ export default function UpdateLocation() {
               />
             </div>
             <div className={Styles.buttonContainer}>
-              <Button variant="contained" onClick={handleClick}>
+              <Button variant="contained" onClick={UpdateLocationClick}>
                 Update
               </Button>
               </div>
