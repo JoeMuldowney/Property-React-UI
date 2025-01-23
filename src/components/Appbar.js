@@ -79,7 +79,7 @@ export default function Appbar() {
             component="div"
             sx={{ flexGrow: 1,textAlign: 'right', display: { xs: 'none', sm: 'block' } }}
           >
-            Client Property System (CPS)
+            Data Property System (DPS)
           </Typography>
           
         </Toolbar>
