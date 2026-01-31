@@ -62,14 +62,14 @@ export default function LocationSearch(){
     autoComplete="off"
     >
         <Paper elevation={3} style={paperStyle}>
-            <h1 style={{color:"black"}}><b>Search by location id</b></h1>
-            <TextField  label="Location id " variant="outlined" fullWidth
+            <h3 style={{color:"black"}}><b>Search By Location Id (e.g. 1-20)</b></h3>
+            <TextField  label="Location #" variant="outlined" fullWidth
     value={id}
     onChange={(e)=>setId(e.target.value)} />
      {/* Display the personData */}
  {locationData && (
         <div>
-          <h2>Location Information:</h2>
+          
           <p>Street: {locationData.street}</p>
           <p>City: {locationData.city}</p>
           <p>State: {locationData.state}</p>

@@ -110,13 +110,13 @@ export default function UpdateClient() {
       autoComplete="off"
     >
         <Paper elevation={3} style={paperStyle}>
-            <h1 style={{color:"black"}}><b>Update Client</b></h1>
+            <h3 style={{color:"black"}}><b>Update By Client Id (e.g. 1-5)</b></h3>
             {!isSearched ? (
           // Search Section
           <div>
             <div className={Styles.spacing}>
               <TextField
-                label="Search by ID"
+                label="Client #"
                 variant="outlined"
                 fullWidth
                 value={id}

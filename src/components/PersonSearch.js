@@ -61,21 +61,21 @@ return(
     autoComplete="off"
   >
      <Paper elevation={3} style={paperStyle}>
-          <h1 style={{color:"black"}}><b>Search by client id</b></h1>
-          <TextField  label="Person id " variant="outlined" fullWidth
+          <h3 style={{color:"black"}}><b>Search By Client Id (e.g. 1-5)</b></h3>
+          <TextField  label="Client #" variant="outlined" fullWidth
     value={id}
     onChange={(e)=>setId(e.target.value)} />
  {/* Display the personData */}
  {personData && (
         <div>
-          <h2>Owner Information:</h2>
+          <h2>Client Name:</h2>
           <p>First Name: {personData.firstName}</p>
           <p>Last Name: {personData.lastName}</p>
 
           {/* Display locations if available */}
           {personData.locations && personData.locations.length > 0 && (
             <div>
-              <h3>Locations:</h3>
+              <h3>Client's Locations:</h3>
               <ul>
                 {personData.locations.map((location, index) => (
                   <li key={index}>

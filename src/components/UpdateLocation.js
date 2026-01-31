@@ -105,13 +105,13 @@ export default function UpdateLocation() {
       autoComplete="off"
     >
         <Paper elevation={3} style={paperStyle}>
-            <h1 style={{color:"black"}}><b>Update Location</b></h1>
+            <h3 style={{color:"black"}}><b>Update Location By Id (e.g. 1-20)</b></h3>
             {!isSearched ? (
           // Search Section
           <div>
             <div className={Styles.spacing}>
               <TextField
-                label="Search by ID"
+                label="Location #"
                 variant="outlined"
                 fullWidth
                 value={id}

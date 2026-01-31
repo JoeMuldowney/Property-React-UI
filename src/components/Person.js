@@ -19,7 +19,7 @@ export default function Person() {
         e.stopPropagation();   
     const person = { firstName, lastName, locations }; 
     console.log(person)
-    fetch("http://localhost:8060/backend/addperson",{
+    fetch("https://csportfoliojm.com/backend/addperson",{
          method: "POST", 
          headers:{"Content-Type":"application/json"}, 
          body:JSON.stringify(person)
@@ -81,7 +81,7 @@ export default function Person() {
       autoComplete="off"
     >
         <Paper elevation={3} style={paperStyle}>
-            <h1 style={{color:"black"}}><b>Add Client</b></h1>
+            
             <div className={Styles.spacing}>
       <TextField  label="First Name" variant="outlined" fullWidth
       value={firstName}
@@ -95,7 +95,7 @@ export default function Person() {
           <div key={index}>
             <div className={Styles.spacing}>
             <TextField
-              label={`Street ${index + 1}`}              
+              label={`Street`}              
               fullWidth
               value={location.street}
               onChange={(e) =>
@@ -106,7 +106,7 @@ export default function Person() {
             </div>
             <div className={Styles.spacing}>
             <TextField
-              label={`City ${index + 1}`}              
+              label={`City`}              
               fullWidth
               value={location.city}
               onChange={(e) =>
@@ -116,7 +116,7 @@ export default function Person() {
             </div>
             <div className={Styles.spacing}>
             <TextField
-              label={`ZIP Code ${index + 1}`}              
+              label={`ZIP Code`}              
               fullWidth
               value={location.zipCode}
               onChange={(e) =>
@@ -125,7 +125,7 @@ export default function Person() {
             />
             <div className={Styles.spacing}>
             <TextField
-              label={`State ${index + 1}`}              
+              label={`State Abbreviation`}              
               fullWidth
               value={location.state}
               onChange={(e) =>
@@ -135,7 +135,7 @@ export default function Person() {
             </div>
             <div className={Styles.spacing}></div>
             <TextField
-              label={`Price ${index + 1}`}              
+              label={`Price`}              
               fullWidth
               value={location.price}
               onChange={(e) =>

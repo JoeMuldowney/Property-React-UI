@@ -115,7 +115,7 @@ return (
     <Paper elevation={3} style={paperStyle}>
       {!isReport ? (
         <div>
-          <h1 style={{ color: "black" }}><b>Report Generator</b></h1>
+          
           <h3 style={{ color: "black" }}><b>Select Report Parameter</b></h3>
           <Button variant="contained" onClick={() => { setUsePrice(true); setUseState(false); }}>By Price Range</Button> <Button variant="contained" onClick={() => { setUsePrice(false); setUseState(true); }}>By State</Button>  
           

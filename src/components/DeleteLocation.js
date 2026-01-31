@@ -57,8 +57,8 @@ export default function DeleteLocation(){
     autoComplete="off"
     >
         <Paper elevation={3} style={paperStyle}>
-            <h1 style={{color:"black"}}><b>Enter id of location to be removed</b></h1>
-            <TextField  label="Location id " variant="outlined" fullWidth
+            <h3 style={{color:"black"}}><b>Remove Location By Id</b></h3>
+            <TextField  label="Location #" variant="outlined" fullWidth
     value={id}
     onChange={(e)=>setId(e.target.value)} />
 

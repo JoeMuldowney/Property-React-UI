@@ -68,9 +68,9 @@ export default function AddLocations() {
       autoComplete="off"
     >
         <Paper elevation={3} style={paperStyle}>
-            <h1 style={{color:"black"}}><b>Enter client id with new location address</b></h1>
+            <h3 style={{color:"black"}}><b>Add Location By Client Id (e.g. 1-5)</b></h3>
             <div className={Styles.spacing}>
-      <TextField  label="Client Id " variant="outlined" fullWidth
+      <TextField  label="Client #" variant="outlined" fullWidth
       value={id}
       onChange={(e)=>setId(e.target.value)} /></div>
 
