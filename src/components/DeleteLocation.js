@@ -15,25 +15,7 @@ export default function DeleteLocation(){
         const idValue = id;  
 
 
-    fetch("https://csportfoliojm.com/backend/location/" + idValue,{
-         method: "DELETE", 
-         
-        })       
-
-      .catch(error => {
-        console.error("Error looking up person:", error);
-        if (error.response) {
-          // The request was made and the server responded with a status code
-          console.error("Server responded with status:", error.response.status);
-        } else if (error.request) {
-          // The request was made but no response was received
-          console.error("No response received:", error.request);
-        } else {
-          // Something else happened while setting up the request
-          console.error("Error setting up request:", error.message);
-        }
-          
-        });
+    
 
   };
 
