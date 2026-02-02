@@ -63,12 +63,9 @@ export default function AddLocations() {
       value={id}
       onChange={(e)=>setId(e.target.value)} /></div>
 
-      <div>
-      <TextField  label="street" variant="outlined" fullWidth
-      value={street}
-      onChange={(e)=>setStreet(e.target.value)} /></div>
+
       <div className={Styles.spacing}>
-      <TextField  label="city" variant="outlined" fullWidth
+      <TextField  label="test_city" variant="outlined" fullWidth
       value={city}
       onChange={(e)=>setCity(e.target.value)}/></div>
             <div>
